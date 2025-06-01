@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  background-color: #f6be9a;
+  color: #222;
+  line-height: 1.6;
+}
+
+body.dark-mode {
+  background-color: #111;
+  color: #fefefe;
+}
+
+header {
+  background: linear-gradient(135deg, #4a4e69, #d4a373);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fff;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #fff }
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+.toggle-darkmode {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+body.dark-mode .toggle-darkmode {
+  background-color: #333;
+  color: #fff;
+}
+
+nav {
+  background: #84a98c;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  margin: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+.project-filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-filters button {
+  background-color: #0d1321;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.project-filters button:hover,
+.project-filters button.active {
+  background-color: #1e40af;
+}
+
+section {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #902923;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+body.dark-mode h2 {
+  color: #93c5fd;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+.project, .job, .edu {
+  background: #f1f5f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #2563eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .project, 
+body.dark-mode .job, 
+body.dark-mode .edu {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-color: #3b82f6;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color:#2b2d42;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 0.75rem 1.5rem;
+  background: #7873d4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.7s;
+}
+
+.contact-form button:hover {
+  background: #1985a1;
+}
+
+footer {
+  background: #1e3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ffd700;
+}
